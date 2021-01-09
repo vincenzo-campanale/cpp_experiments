@@ -31,5 +31,8 @@
 *.out
 *.app
 
+# Config files
+settings.json
+
 # Folders
 build*/
