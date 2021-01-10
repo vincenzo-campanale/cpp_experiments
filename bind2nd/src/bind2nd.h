@@ -14,7 +14,7 @@ class Binder2nd
     Binder2nd(F f, T y);
 
     template<typename P>
-    auto operator()(P&& first_arg) const -> std::result_of_t<F(P, T)>;
+    auto operator()(P&& x) const -> std::result_of_t<F(P, T)>;
 
   private:
     F f_;
