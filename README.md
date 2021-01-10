@@ -1,1 +1,1 @@
-Collection of personal C++ experiments.
+Messy collection of C++ experiments. :-)
