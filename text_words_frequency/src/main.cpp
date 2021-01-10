@@ -20,9 +20,9 @@ void Print(const std::vector<std::pair<int, std::string>>& pairs);
 // Reverses any container of pairs.
 //
 // Note: for the template argument 'First', it is needed to remove the const qualifier. This is necessary because
-// std::unordered_map stores elements of type std::pair<const Key, T>.
+//       std::unordered_map stores elements of type std::pair<const Key, T>.
 // Note: example of function lifting. We define a lambda that is able to swap a single pair; this function is passed to
-// an higher order function std::transform() that applies the lambda to every item in the input container.
+//       an higher order function std::transform() that applies the lambda to every item in the input container.
 template<typename Pairs,
          typename First = typename std::remove_cv_t<typename Pairs::value_type::first_type>,
          typename Second = typename Pairs::value_type::second_type>
