@@ -1,7 +1,7 @@
 #ifndef MTRY_H
 #define MTRY_H
 
-#include "src/expected.h"
+#include "expected.h"
 #include <exception>
 #include <type_traits>
 
@@ -12,11 +12,11 @@ Exp MTry(F f)
 {
     try
     {
-        return Exp::success(f());
+        return Exp::Success(f());
     }
     catch (...)
     {
-        return Exp::error(std::current_exception());
+        return Exp::Error(std::current_exception());
     }
 }
 

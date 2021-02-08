@@ -153,13 +153,13 @@ auto Expected<T, E>::Error(ConsParams&& ...params) -> Expected
 template<typename T, typename E>
 Expected<T, E>::operator bool() const
 {
-    return in_valid_;
+    return is_valid_;
 }
 
 template<typename T, typename E>
 bool Expected<T, E>::IsValid() const
 {
-    return in_valid_;
+    return is_valid_;
 }
 
 template<typename T, typename E>
@@ -244,7 +244,7 @@ ResultType MBind(const Expected<T, E>& exp, Function f)
     }
     else
     {
-        return ResultType::error(exp.Error());
+        return ResultType::Error(exp.Error());
     }
 }
 
